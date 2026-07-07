@@ -90,7 +90,11 @@ class ModelService:
 
         if "xgb" in model_type.lower() or "tree" in model_type.lower():
             return self.model_xgb
-        elif "nn" in model_type.lower() or "mlp" in model_type.lower() or "neural" in model_type.lower():
+        elif (
+            "nn" in model_type.lower()
+            or "mlp" in model_type.lower()
+            or "neural" in model_type.lower()
+        ):
             return self.model_nn
         else:
             raise ValueError(f"Unknown model architecture type requested: {model_type}")

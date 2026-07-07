@@ -43,6 +43,7 @@ def test_shap_explanation(core_deps):
 
     # Cleanup test artifact
     import os
+
     if os.path.exists(pipeline.encoder_path):
         os.remove(pipeline.encoder_path)
 
@@ -63,5 +64,6 @@ def test_lime_explanation(core_deps):
 
     # Cleanup test artifact
     import os
+
     if os.path.exists(pipeline.encoder_path):
         os.remove(pipeline.encoder_path)

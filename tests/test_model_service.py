@@ -48,6 +48,7 @@ def test_model_service_prediction(services):
 
     # Cleanup test artifact
     import os
+
     if os.path.exists(pipeline.encoder_path):
         os.remove(pipeline.encoder_path)
 
@@ -68,5 +69,6 @@ def test_model_divergence(services):
 
     # Cleanup test artifact
     import os
+
     if os.path.exists(pipeline.encoder_path):
         os.remove(pipeline.encoder_path)
