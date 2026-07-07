@@ -1,0 +1,7 @@
+﻿venv/
+__pycache__/
+*.pkl
+*.dll
+*.exe
+.env
+node_modules/

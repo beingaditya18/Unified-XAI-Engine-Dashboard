@@ -1,0 +1,26 @@
+site_name: Unified XAI Governance Engine
+site_description: Production-grade model explainability, cohort fairness audits, and model divergence analytics
+site_author: Aditya Mandloi
+repo_url: https://github.com/adityamandloi/Unified-XAI-Engine-Dashboard
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+  - Architecture & Design: architecture.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

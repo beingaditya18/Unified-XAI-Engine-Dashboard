@@ -1,0 +1,65 @@
+# Unified XAI Engine Configuration
+
+data:
+  raw_path: "data/adult_income.csv"
+  test_path: "data/processed_test.csv"
+  target_column: "income"
+  random_state: 42
+  test_size: 0.2
+  columns:
+    - age
+    - workclass
+    - fnlwgt
+    - education
+    - education-num
+    - marital-status
+    - occupation
+    - relationship
+    - race
+    - sex
+    - capital-gain
+    - capital-loss
+    - hours-per-week
+    - native-country
+    - income
+
+models:
+  xgb:
+    path: "models/xgb_model.pkl"
+    encoder_path: "models/label_encoders.pkl"
+    params:
+      n_estimators: 100
+      max_depth: 4
+      learning_rate: 0.1
+      random_state: 42
+      eval_metric: "logloss"
+  nn:
+    path: "models/nn_model.pkl"
+    params:
+      hidden_layer_sizes: [32, 16]
+      max_iter: 300
+      random_state: 42
+      early_stopping: true
+
+explainability:
+  shap:
+    background_samples: 100
+    test_samples: 50
+  lime:
+    num_features: 10
+  fairness:
+    disparity_threshold: 0.15
+    protected_attributes:
+      gender:
+        column: "sex"
+        privileged_value: 1 # Male is encoded as 1
+        unprivileged_value: 0 # Female is encoded as 0
+      race:
+        column: "race"
+        privileged_value: 4 # White is usually encoded as 4
+        unprivileged_value: 2 # Black is usually encoded as 2 (or verify mapping)
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  ui_port: 8501

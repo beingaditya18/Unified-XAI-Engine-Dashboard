@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      target: api
+    container_name: xai-backend-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=production
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  ui:
+    build:
+      context: .
+      target: ui
+    container_name: xai-frontend-ui
+    ports:
+      - "8501:8501"
+    environment:
+      - ENV=production
+      - BACKEND_API_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data

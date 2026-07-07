@@ -1,0 +1,63 @@
+model_card:
+  metadata:
+    name: Unified XAI Income Governance Models
+    version: 1.0.0
+    date: 2026-07-07
+    author: Aditya Mandloi
+    license: MIT
+    description: Tabular binary classification models trained on the UCI Adult Income Dataset with local/global explainers and fairness auditing modules.
+
+  architectures:
+    - name: XGBoost Classifier (Tree Ensemble)
+      type: xgboost.XGBClassifier
+      hyperparameters:
+        n_estimators: 100
+        max_depth: 6
+        learning_rate: 0.1
+        subsample: 0.8
+    - name: Multi-Layer Perceptron (MLP Neural Network)
+      type: sklearn.neural_network.MLPClassifier
+      hyperparameters:
+        hidden_layer_sizes: [64, 32]
+        activation: relu
+        solver: adam
+        max_iter: 500
+
+  intended_use:
+    primary_users: ML Engineers, Compliance Officers, Policy Auditors, Data Scientists.
+    intended_applications: High-stakes decision audits, fairness and demographic bias evaluation, model explanation comparison (SHAP vs. LIME).
+    out_of_scope: Direct financial underwriting or credit scoring without human-in-the-loop oversight.
+
+  evaluation_data:
+    dataset: UCI Adult Income Census Dataset (validation split)
+    sample_size: 9633 instances
+    target: income (>50K vs <=50K)
+
+  performance_metrics:
+    xgboost:
+      accuracy: 0.8580
+      f1_score: 0.6682
+      roc_auc: 0.9124
+    mlp_neural_network:
+      accuracy: 0.8481
+      f1_score: 0.6460
+      roc_auc: 0.8996
+
+  fairness_audit:
+    protected_attributes:
+      - sex (Male vs. Female)
+      - race (White vs. Non-White / Protected Cohorts)
+    metrics_evaluated:
+      - Disparate Impact Ratio (DIR / DPR)
+      - Demographic Parity Difference
+      - Equal Opportunity Difference (True Positive Rate Difference)
+    findings:
+      warning: Both models display selection bias against Female and Non-White cohorts, scoring below the standard 0.80 Disparate Impact Ratio threshold (80% rule).
+      xgboost_gender_dir: 0.285
+      xgboost_race_dir: 0.264
+      mlp_gender_dir: 0.252
+      mlp_race_dir: 0.228
+
+  ethical_considerations:
+    data_bias: The training data reflects historical wage and employment inequalities from the 1994 US census. Models trained on this data will propagate these biases.
+    mitigation_strategies: Users should investigate pre-processing (reweighing) or post-processing (equalized odds post-processing) fairness interventions.

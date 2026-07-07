@@ -1,0 +1,40 @@
+name: 💡 Feature Request
+description: Propose an idea or architectural upgrade for this project.
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea to make this project better? Let us know!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Is your request related to a problem or limitation?
+      placeholder: Describe the current problem...
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the changes or addition you would like to see.
+      placeholder: Describe the ideal outcome...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or workarounds you've considered.
+      placeholder: Describe alternatives...
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Extra Context
+      description: Any extra context, screenshots, or research papers relating to the feature.
+    validations:
+      required: false
