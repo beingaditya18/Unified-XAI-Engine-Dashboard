@@ -39,4 +39,4 @@ jobs:
 
     - name: Run automated test suite (pytest)
       run: |
-        pytest tests/ -v
+        python -m pytest tests/ -v
