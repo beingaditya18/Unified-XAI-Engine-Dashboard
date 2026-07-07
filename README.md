@@ -6,9 +6,9 @@
 <h3 align="center">Model-Agnostic Explainability, Cohort Fairness Audits, and Model Divergence Analytics</h3>
 
 <p align="center">
-  <a href="https://github.com/adityamandloi/Unified-XAI-Engine-Dashboard"><img src="https://img.shields.io/badge/python-3.10+-blue?logo=python&logoColor=white" alt="Python Support"/></a>
+  <a href="https://github.com/beingaditya18/Unified-XAI-Engine-Dashboard"><img src="https://img.shields.io/badge/python-3.10+-blue?logo=python&logoColor=white" alt="Python Support"/></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License"/></a>
-  <a href="https://github.com/adityamandloi/Unified-XAI-Engine-Dashboard/actions"><img src="https://img.shields.io/github/actions/workflow/status/adityamandloi/Unified-XAI-Engine-Dashboard/ci.yml?branch=main&label=CI" alt="Build Status"/></a>
+  <a href="https://github.com/beingaditya18/Unified-XAI-Engine-Dashboard/actions"><img src="https://img.shields.io/github/actions/workflow/status/beingaditya18/Unified-XAI-Engine-Dashboard/ci.yml?branch=main&label=CI" alt="Build Status"/></a>
   <a href="https://hub.docker.com/"><img src="https://img.shields.io/badge/docker-ready-blue?logo=docker" alt="Docker Ready"/></a>
   <a href="https://fastapi.tiangolo.com/"><img src="https://img.shields.io/badge/API-FastAPI-brightgreen?logo=fastapi" alt="FastAPI"/></a>
 </p>
@@ -116,7 +116,7 @@ Launch the entire ecosystem (FastAPI Backend + Streamlit UI) in seconds:
 
 ```bash
 # Clone the repository
-git clone https://github.com/adityamandloi/Unified-XAI-Engine-Dashboard.git
+git clone https://github.com/beingaditya18/Unified-XAI-Engine-Dashboard.git
 cd Unified-XAI-Engine-Dashboard
 
 # Boot containers
@@ -216,11 +216,8 @@ make test
     }
   }
   ```
-
 ---
 
-
----
 
 ## 📄 License
 

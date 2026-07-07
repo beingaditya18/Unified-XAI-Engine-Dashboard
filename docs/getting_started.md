@@ -13,7 +13,7 @@ Ensure you have the following installed on your system:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/adityamandloi/Unified-XAI-Engine-Dashboard.git
+   git clone https://github.com/beingaditya18/Unified-XAI-Engine-Dashboard.git
    cd Unified-XAI-Engine-Dashboard
    ```
 

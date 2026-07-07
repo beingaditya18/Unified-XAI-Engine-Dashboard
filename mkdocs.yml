@@ -1,7 +1,7 @@
 site_name: Unified XAI Governance Engine
 site_description: Production-grade model explainability, cohort fairness audits, and model divergence analytics
-site_author: Aditya Mandloi
-repo_url: https://github.com/adityamandloi/Unified-XAI-Engine-Dashboard
+site_author: beingaditya18
+repo_url: https://github.com/beingaditya18/Unified-XAI-Engine-Dashboard
 theme:
   name: material
   palette:

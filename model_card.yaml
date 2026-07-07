@@ -3,7 +3,7 @@ model_card:
     name: Unified XAI Income Governance Models
     version: 1.0.0
     date: 2026-07-07
-    author: Aditya Mandloi
+    author: beingaditya18
     license: MIT
     description: Tabular binary classification models trained on the UCI Adult Income Dataset with local/global explainers and fairness auditing modules.
 
