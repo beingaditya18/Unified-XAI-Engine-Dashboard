@@ -33,6 +33,10 @@ jobs:
       run: |
         ruff check src/ explainability/ dashboard/ models/ tests/
 
+    - name: Train models
+      run: |
+        python models/train_models.py
+
     - name: Run automated test suite (pytest)
       run: |
         pytest tests/ -v
