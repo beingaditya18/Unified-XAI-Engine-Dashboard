@@ -219,30 +219,6 @@ make test
 
 ---
 
-## 🗺️ Roadmap & Milestones
-
-* [x] **Phase 1: Foundations** — Decouple pipeline logic, cache SHAP explainers, handle `?` missing values, and serialize categorical encoders.
-* [x] **Phase 2: Modular API** — Deliver REST API endpoints with FastAPI. Build unit test suites (`pytest`) and GitHub CI.
-* [x] **Phase 3: Deep Audits** — Add Multi-Attribute fairness tracking (Race and Sex) and build model prediction divergence tracker.
-* [ ] **Phase 4: Counterfactuals** — Integrate `DiCE` for counterfactual recommendations ("How does the user obtain high-income status?").
-* [ ] **Phase 5: Natural Explanations** — Plug in an LLM agent to convert attribution arrays into human-friendly governance summaries.
-
----
-
-## 📜 Citation
-
-If you use this project in your research or audits, please cite:
-
-```bibtex
-@software{mandloi2026unifiedxai,
-  author = {Mandloi, Aditya},
-  title = {Unified XAI Engine & Governance Dashboard},
-  year = {2026},
-  publisher = {GitHub},
-  journal = {GitHub Repository},
-  howpublished = {\url{https://github.com/adityamandloi/Unified-XAI-Engine-Dashboard}}
-}
-```
 
 ---
 
