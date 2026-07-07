@@ -35,7 +35,7 @@ jobs:
 
     - name: Train models
       run: |
-        python models/train_models.py
+        python -m models.train_models
 
     - name: Run automated test suite (pytest)
       run: |
